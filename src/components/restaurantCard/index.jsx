@@ -5,14 +5,14 @@ import restaurante from '../../assets/restaurante.jpg';
 
 import { Restaurant, RestaurantInfo, Title, Address, RestaurantPhoto} from './styles'
 
-const RestaurantCard = () => (
-    <Restaurant>
+const RestaurantCard = ({restaurant, onClick}) => (
+    <Restaurant onClick={onClick}>
         <RestaurantInfo>
-            <Title>Nome do Restaurante</Title>
-            <ReactStars count={5} isHalf value={4} edit={false} activeColor="#e7711c"/>
-            <Address>Av Ipanema, 1999</Address>
+            <Title>{restaurant.name}</Title>
+            <ReactStars count={5} isHalf value={restaurant.rating} edit={false} activeColor="#e7711c"/>
+            <Address>{restaurant.vicinity || restaurant.formatted_address}</Address>
         </RestaurantInfo>
-        <RestaurantPhoto src={restaurante} alt="Foto do Restaurante"/>
+        <RestaurantPhoto src={restaurant.photos ? restaurant.photos[0].getUrl() : restaurante} alt="Foto do Restaurante"/>
     </Restaurant>);
 
 export default RestaurantCard;

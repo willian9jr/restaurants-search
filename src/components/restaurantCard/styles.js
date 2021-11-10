@@ -39,7 +39,7 @@ export const Address = styled.span`
 `;
 
 export const RestaurantPhoto = styled.img`
-    widht:100px;
+    width: 100px;
     height: 100px;
     object-fit:cover;
     border-radius:6px;
