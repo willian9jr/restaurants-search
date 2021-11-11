@@ -80,6 +80,8 @@ export const MapContainer = (props) =>{
     }
 
     return (
+
+        
         <Map 
             google={google} 
             centerAroundCurrentLocation onReady={onMapReady} 
@@ -96,6 +98,8 @@ export const MapContainer = (props) =>{
                     />
                 ))}
         </Map>
+    
+        
     );
 };
 

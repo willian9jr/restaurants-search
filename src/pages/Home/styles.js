@@ -31,11 +31,6 @@ export const Logo = styled.img`
     margin-right: auto;
 `;
 
-export const Map = styled.div`
-    background-color: red;
-    width: 500px;
-`;
-
 export const Carousel = styled(Slider)`
     .slick-slide{
         margin-right: 30px;
